@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { createPost, getFunc } from "./service/api";
 import {useNavigate} from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 import { loginFunc } from "./actions/userActions";
@@ -61,7 +62,7 @@ const Login =() => {
                  <input onChange={(e) => handleChange(e)} name="email"  style={{ borderStyle:"none", margin:"2%", height:"10%", borderRadius:"4px", padding:"12px 20px" ,border:"none"}} placeholder="email" value={post.email}></input>
                  <input onChange={(e) => handleChange(e)} name="password"  style={{ borderStyle:"none", margin:"2%", height:"10%", borderRadius:"4px", padding:"12px 20px" ,border:"none"}} placeholder="password" value={post.password}></input>
                  <button type="submit" style={{padding:"12px", width:"20%" ,margin:"0px auto", borderRadius:"10px", border:"none", backgroundColor:"grey"}} type="submit">Login</button>
-                 <a style={{textAlign:"center",  backgroundColor:"#F4F4F6", fontSize:"15px"}} href="/register">Register here</a>
+                 <Link  to={"/register"}><a className="navadd">Register</a></Link>
                </div>
             </div>    
         </div>

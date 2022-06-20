@@ -66,6 +66,7 @@ const Product = ({item}) => {
                          <div style={{display:"flex", justifyContent:"space-between", alignItems:"center" ,width:"100%", height:"100%" ,padding:"2%", marginTop:"0%"}}>
                              <button onClick={likeHandler} style={{fontSize:"2vmin", borderRadius:"7px", padding:"2%", borderColor:"grey", backgroundColor: x}}>{likes} like</button>
                              <p style={{color:"grey", fontStyle:"italic", fontSize:"2.4vmin"}}>{`by ${item.username}`}</p>
+                             <Link to={`details/${item._id}` ||url}><a className="navadd">Detail</a></Link>
                          </div>
                        </div>    
                 </div>
