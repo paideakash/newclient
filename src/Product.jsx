@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate } from "react-router-dom";
 import { userLoginReducer } from "./reducers/userReducer";
 import { likefunc } from "./actions/userActions";
-import normalizeWindowsPath from "tar/lib/normalize-windows-path";
 
 const Product = ({item}) => {
 
