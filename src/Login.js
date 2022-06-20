@@ -62,7 +62,7 @@ const Login =() => {
                  <input onChange={(e) => handleChange(e)} name="email"  style={{ borderStyle:"none", margin:"2%", height:"10%", borderRadius:"4px", padding:"12px 20px" ,border:"none"}} placeholder="email" value={post.email}></input>
                  <input onChange={(e) => handleChange(e)} name="password"  style={{ borderStyle:"none", margin:"2%", height:"10%", borderRadius:"4px", padding:"12px 20px" ,border:"none"}} placeholder="password" value={post.password}></input>
                  <button type="submit" style={{padding:"12px", width:"20%" ,margin:"0px auto", borderRadius:"10px", border:"none", backgroundColor:"grey"}} type="submit">Login</button>
-                 <Link  to={"/register"}><a className="navadd">Register</a></Link>
+                 <Link to={"/register"}><a className="navadd">Register</a></Link>
                </div>
             </div>    
         </div>
