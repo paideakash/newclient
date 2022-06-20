@@ -45,7 +45,7 @@ const Detail = () => {
     return(
         <>
             <div style={{width:"100vw", height:"90vh"}}>
-                <div className="detailCont" style={{ margin:"auto", marginTop:"10vh", backgroundColor:"#F4F4F6", borderRadius: "3%"}}>
+                <div className="detailCont" style={{ margin:"auto", marginTop:"145vh", backgroundColor:"#F4F4F6", borderRadius: "3%"}}>
                    <img style={{ width:"100%",height:"65%", objectFit:"cover",  borderRadius: "3%" ,marginBottom:"3%"}} src= {post.picture || url}></img> 
                    <div style={{ marginTop:"3%",backgroundColor:"#F4F4F6" ,display:"flex", flexDirection:"column", justifyContent:"space-evenly", height:"35%", alignContent:"center"}}>
                      <input onChange={(e) => handleChange(e)}   name="title"  style={{borderStyle:"none", margin:"2%",height:"10%", borderRadius:"4px", padding:"12px 20px" ,border:"none"}} placeholder="title" value={post.title}></input>

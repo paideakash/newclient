@@ -36,7 +36,7 @@ const Navbar = () => {
                    <a style={{textDecoration:"none"}} href="https://www.instagram.com/akashp_18/">About us</a>
                    <a style={{textDecoration:"none"}} href="https://www.instagram.com/akashp_18/">Contact us</a>
                    {userInfo ? <Link to={"/profile"} style={{textDecoration:"none"}} >Profile</Link> : null}
-                   {userInfo ? <Link className="navlink"  to={"/blog"}><a className="navadd">Post</a></Link>: <Link className="navlink" onClick={addFunc} to={"/"}><a className="navadd">Post</a></Link>}
+                   {userInfo ? <Link className="navlink"  to={"/blog"}><a className="navadd">Post</a></Link>: <Link className="navlink" onClick={addFunc} to={"/"}><a style={{color:"#754747"}} className="navadd">Post</a></Link>}
                    
                 </div>
 
@@ -44,7 +44,7 @@ const Navbar = () => {
                     {/* <a>F</a>
                     <a>I</a> */}
                      {userInfo ? <button onClick={logoutFunc} style={{border:"none", marginRight:"10px", fontWeight:"550", fontSize:"110%", color:"#9D9D9D"}}>LOGOUT</button> 
-                     :<button onClick={loginFunc} style={{border:"none", marginRight:"10px", fontWeight:"600", fontSize:"120%", color:"#9D9D9D"}}>LOGIN</button>
+                     :<button onClick={loginFunc} style={{border:"none", marginRight:"10px", fontWeight:"600", fontSize:"120%", color:"rgb(112 109 109)"}}>LOGIN</button>
                      }
                 </div>
             </div>

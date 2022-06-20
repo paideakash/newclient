@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate } from "react-router-dom";
 import { userLoginReducer } from "./reducers/userReducer";
 import { likefunc } from "./actions/userActions";
+import EditIcon from '@mui/icons-material/Edit';
 
 const Product = ({item}) => {
 
@@ -59,14 +60,16 @@ const Product = ({item}) => {
     return(
         <>
                 <div className="detaildiv">
-                          <a style={{height:"80%",width:"100%"}} href={ `details/${item._id}` ||url}>
+                          <a style={{height:"80%",width:"100%"}} href={url}>
                                 <img src={url} style={{width:"100%",height:"100%",objectFit:"cover",borderRadius:"4%"}} ></img>                              
                           </a>
                       <div className="content" style={{width:"100%", height:"4vmax"}}>
                          <div style={{display:"flex", justifyContent:"space-between", alignItems:"center" ,width:"100%", height:"100%" ,padding:"2%", marginTop:"0%"}}>
+            
                              <button onClick={likeHandler} style={{fontSize:"2vmin", borderRadius:"7px", padding:"2%", borderColor:"grey", backgroundColor: x}}>{likes} like</button>
-                             <p style={{color:"grey", fontStyle:"italic", fontSize:"2.4vmin"}}>{`by ${item.username}`}</p>
-                             <Link to={`details/${item._id}` ||url}><a className="navadd">Detail</a></Link>
+                             
+                             { item.username== userInfo.username ? <p style={{color:"grey", fontStyle:"italic", fontSize:"2.4vmin"}}>{`by you`}</p>:<p style={{color:"grey", fontStyle:"italic", fontSize:"2.4vmin"}}>{`by ${item.username}`}</p>}                            
+                             { item.username== userInfo.username ? <Link to={`details/${item._id}` ||url}><EditIcon style={{color:"#433e3e"}}/></Link>:null}
                          </div>
                        </div>    
                 </div>

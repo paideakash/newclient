@@ -54,9 +54,10 @@ const Register =() => {
     return(
         <form onSubmit={savePost}>
         <div style={{width:"100vw", height:"90vh"}}>
-            <div className="detailCont" style={{ margin:"auto", marginTop:"10vh", backgroundColor:"#F4F4F6", borderRadius: "3%"}}>
-               <img style={{ width:"100%",height:"65%", objectFit:"cover",  borderRadius: "3%" ,marginBottom:"3%"}} src= {url}></img> 
-               <div style={{ marginTop:"3%",backgroundColor:"#F4F4F6" ,display:"flex", flexDirection:"column", justifyContent:"space-evenly", height:"35%"}}>
+            <div className="detailCont" style={{ margin:"auto", marginTop:"5vh", backgroundColor:"#F4F4F6", borderRadius: "3%"}}>
+               <h1 style={{textAlign:"center", color:"#7c7070", border:"none", backgroundColor:"#F4F4F6"}}>REGISTER</h1>
+               <img style={{ width:"100%",height:"63%", objectFit:"cover",  borderRadius: "3%" ,marginBottom:"3%"}} src= {url}></img> 
+               <div style={{ marginTop:"0%",backgroundColor:"#F4F4F6" ,display:"flex", flexDirection:"column", justifyContent:"space-evenly", height:"35%"}}>
                  <input onChange={(e) => handleChange(e)}  style={{borderStyle:"none", margin:"2%"}} name="username"  style={{height:"10%", borderRadius:"4px", padding:"12px 20px" ,border:"none"}} placeholder="username" value={post.username}></input>
                  <input onChange={(e) => handleChange(e)} style={{borderStyle:"none", margin:"2%"}} name="email"  style={{height:"10%", borderRadius:"4px", padding:"12px 20px" ,border:"none"}} placeholder="email" value={post.email}></input>
                  <input onChange={(e) => handleChange(e)} style={{borderStyle:"none", margin:"2%"}} name="password"  style={{height:"10%", borderRadius:"4px", padding:"12px 20px" ,border:"none"}} placeholder="password" value={post.password}></input>
